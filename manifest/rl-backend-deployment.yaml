@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata:
+  name: back-end-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: rl-backend
+  template:
+    metadata:
+      labels:
+        component: rl-backend
+    spec:
+      containers:
+        - name: flask-back-end
+          image: faysalmehedi/rl-backend:v1
+          env:
+          - name: POSTGRES_HOST
+            value: postgres-svc
+          - name: POSTGRES_PORT
+            value: '5432'
+          - name: POSTGRES_USER
+            value: postgres
+          - name: POSTGRES_PASSWORD
+            value: postgres
+          - name: POSTGRES_DB
+            value: books
+          ports:
+          - containerPort: 5000

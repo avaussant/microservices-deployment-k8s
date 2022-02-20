@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata:
+  name: front-end-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: rl-frontend
+  template:
+    metadata:
+      labels:
+        component: rl-frontend
+    spec:
+      containers:
+        - name: react-frontend
+          image: faysalmehedi/rl-frontend:v2
+          env:
+          - name: API_HOST
+            value: '10.244.1.4'
+          - name: API_PORT
+            value: '5000'
+          ports:
+            - containerPort: 80

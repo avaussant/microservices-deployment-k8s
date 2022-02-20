@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: rl-backend-svc
+  labels:
+    service: rl-backend-svc
+spec:
+  selector:
+    component: rl-backend
+  ports:
+  - port: 5000
+    targetPort: 5000
+    protocol: TCP
