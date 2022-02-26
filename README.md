@@ -172,3 +172,7 @@ kubectl apply -f rl-backend-service.yaml
 kubectl get pods
 # you will pods are creating or terminating based on ReplicaSet changes
 ```
+
+#### Browser Screenshot
+
+![Browser Screenshot](https://github.com/faysalmehedi/microservices-deployment-k8s/blob/main/browser-screeshot.png)
