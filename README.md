@@ -175,4 +175,5 @@ kubectl get pods
 
 #### Browser Screenshot
 
-![Browser Screenshot](https://github.com/faysalmehedi/microservices-deployment-k8s/blob/main/browser-screeshot.png)
+![Browser Screenshot](https://github.com/faysalmehedi/microservices-deployment-k8s/blob/main/browser-screenshot.png)
+
