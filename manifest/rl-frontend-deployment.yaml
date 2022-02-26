@@ -17,7 +17,7 @@ spec:
           image: faysalmehedi/rl-frontend:v2
           env:
           - name: API_HOST
-            value: '10.244.1.4'
+            value: '10.244.1.3'
           - name: API_PORT
             value: '5000'
           ports:
